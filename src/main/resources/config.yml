@@ -1,0 +1,19 @@
+#
+# plugin config
+#
+# DEBUG MODE
+debug: false
+
+Discord:
+  # bot token
+  BotToken: ""
+  # channel id
+  ChannelId: ""
+  # bot status
+  BotStatus: "123 Server"
+  # message title
+  TitleName: "DISCORD"
+  # message max
+  MessageMaxLength: 48
+  # game title
+  GameName: "GAME"
