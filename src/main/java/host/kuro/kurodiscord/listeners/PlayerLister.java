@@ -5,7 +5,9 @@ import host.kuro.kurodiscord.KuroDiscord;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerChatEvent;
+import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.player.*;
+import org.bukkit.event.raid.RaidTriggerEvent;
 
 public class PlayerLister implements Listener {
 

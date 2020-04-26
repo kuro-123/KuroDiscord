@@ -8,6 +8,8 @@ import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 import org.bukkit.Bukkit;
+import org.bukkit.plugin.ServicePriority;
+import org.bukkit.plugin.ServicesManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class KuroDiscord extends JavaPlugin {
@@ -46,6 +48,7 @@ public class KuroDiscord extends JavaPlugin {
             Bukkit.getServer().shutdown();
             return;
         }
+        Bukkit.getServicesManager().register(KuroDiscord.class, this, this, ServicePriority.High);
         getLogger().info(Language.translate("plugin.loaded"));
     }
 

@@ -41,7 +41,7 @@ public class DiscordMessage {
             plugin.getLogger().warning(ErrorUtils.GetErrorMessage(ex));
         }
     }
-    private void SendDiscordRedMessage(String message) {
+    public void SendDiscordRedMessage(String message) {
         try {
             if (plugin.getJDA() == null) return;
             TextChannel channel = plugin.getJDA().getTextChannelById(plugin.getChannelId());
@@ -81,7 +81,7 @@ public class DiscordMessage {
             plugin.getLogger().warning(ErrorUtils.GetErrorMessage(ex));
         }
     }
-    private void SendDiscordGreenMessage(String message) {
+    public void SendDiscordGreenMessage(String message) {
         try {
             if (plugin.getJDA() == null) return;
             TextChannel channel = plugin.getJDA().getTextChannelById(plugin.getChannelId());
@@ -101,7 +101,7 @@ public class DiscordMessage {
             plugin.getLogger().warning(ErrorUtils.GetErrorMessage(ex));
         }
     }
-    private void SendDiscordYellowMessage(String message) {
+    public void SendDiscordYellowMessage(String message) {
         try {
             if (plugin.getJDA() == null) return;
             TextChannel channel = plugin.getJDA().getTextChannelById(plugin.getChannelId());
@@ -121,7 +121,7 @@ public class DiscordMessage {
             plugin.getLogger().warning(ErrorUtils.GetErrorMessage(ex));
         }
     }
-    private void SendDiscordGrayMessage(String message) {
+    public void SendDiscordGrayMessage(String message) {
         try {
             if (plugin.getJDA() == null) return;
             TextChannel channel = plugin.getJDA().getTextChannelById(plugin.getChannelId());
@@ -141,7 +141,7 @@ public class DiscordMessage {
             plugin.getLogger().warning(ErrorUtils.GetErrorMessage(ex));
         }
     }
-    private void SendDiscordBanMessage(String message) {
+    public void SendDiscordBanMessage(String message) {
         try {
             if (plugin.getJDA() == null) return;
             TextChannel channel = plugin.getJDA().getTextChannelById(plugin.getChannelId());
