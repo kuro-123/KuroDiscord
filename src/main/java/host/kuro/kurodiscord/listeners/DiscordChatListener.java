@@ -1,10 +1,12 @@
 package host.kuro.kurodiscord.listeners;
 
+import host.kuro.kurodiscord.DiscordMessage;
 import host.kuro.kurodiscord.KuroDiscord;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
 
 public class DiscordChatListener extends ListenerAdapter {
 
@@ -66,5 +68,12 @@ public class DiscordChatListener extends ListenerAdapter {
     }
 
     private void CommnadExecuteFromDiscord(String message, String author) {
+        if (message.startsWith("/list")) {
+            StringBuilder sb = new StringBuilder();
+            for (Player player : Bukkit.getOnlinePlayers()) {
+                sb.append(String.format("[ %s ワールド: %s 位置: %d,%d,%d ]\n",  player.getDisplayName(), player.getLocation().getWorld().getName(), player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()));
+            }
+            plugin.getDiscordMessage().SendDiscordBlueMessage(new String(sb));
+        }
     }
 }

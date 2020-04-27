@@ -52,7 +52,7 @@ public class DiscordMessage {
             sb.append("```diff\n");
             sb.append("- ");
             sb.append(chat_time);
-            sb.append(" [" + GameName + "] <");
+            sb.append(" [" + GameName + "] ");
             sb.append(CutSection(message));
             sb.append("\n```");
             channel.sendMessage(new String(sb)).queue();
@@ -72,7 +72,7 @@ public class DiscordMessage {
             sb.append("```md\n");
             sb.append("# ");
             sb.append(chat_time);
-            sb.append(" [" + GameName + "] <");
+            sb.append(" [" + GameName + "] ");
             sb.append(CutSection(message));
             sb.append("\n```");
             channel.sendMessage(new String(sb)).queue();
@@ -92,7 +92,7 @@ public class DiscordMessage {
             sb.append("```xl\n");
             sb.append("' ");
             sb.append(chat_time);
-            sb.append(" [" + GameName + "] <");
+            sb.append(" [" + GameName + "] ");
             sb.append(CutSection(message));
             sb.append("\n```");
             channel.sendMessage(new String(sb)).queue();
@@ -112,7 +112,7 @@ public class DiscordMessage {
             sb.append("```diff\n");
             sb.append("+ ");
             sb.append(chat_time);
-            sb.append(" [" + GameName + "] <");
+            sb.append(" [" + GameName + "] ");
             sb.append(CutSection(message));
             sb.append("\n```");
             channel.sendMessage(new String(sb)).queue();
@@ -132,7 +132,7 @@ public class DiscordMessage {
             sb.append("```py\n");
             sb.append("# ");
             sb.append(chat_time);
-            sb.append(" [" + GameName + "] <");
+            sb.append(" [" + GameName + "] ");
             sb.append(CutSection(message));
             sb.append("\n```");
             channel.sendMessage(new String(sb)).queue();
@@ -152,7 +152,7 @@ public class DiscordMessage {
             sb.append("```diff\n");
             sb.append("- ");
             sb.append(chat_time);
-            sb.append(" [" + GameName + "] <");
+            sb.append(" [" + GameName + "] ");
             sb.append(CutSection(message));
             sb.append("\n```");
             channel.sendMessage(new String(sb)).queue();
