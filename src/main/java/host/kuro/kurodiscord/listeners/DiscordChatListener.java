@@ -70,9 +70,12 @@ public class DiscordChatListener extends ListenerAdapter {
     private void CommnadExecuteFromDiscord(String message, String author) {
         if (message.startsWith("/list")) {
             StringBuilder sb = new StringBuilder();
+            int cnt=0;
             for (Player player : Bukkit.getOnlinePlayers()) {
-                sb.append(String.format("[ %s ワールド: %s 位置: %d,%d,%d ]\n",  player.getDisplayName(), player.getLocation().getWorld().getName(), player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()));
+                sb.append(String.format("\n[ %s ワールド: %s 位置: %d,%d,%d ]", player.getName(), player.getLocation().getWorld().getName(), player.getLocation().getBlockX(), player.getLocation().getBlockY(), player.getLocation().getBlockZ()));
+                cnt++;
             }
+            sb.append(String.format("\nオンライン : %d人\n", cnt));
             plugin.getDiscordMessage().SendDiscordBlueMessage(new String(sb));
         }
     }
