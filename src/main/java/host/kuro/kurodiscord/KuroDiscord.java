@@ -8,6 +8,7 @@ import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 import org.bukkit.Bukkit;
+import org.bukkit.Server;
 import org.bukkit.plugin.ServicePriority;
 import org.bukkit.plugin.ServicesManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -40,7 +41,7 @@ public class KuroDiscord extends JavaPlugin {
 
         // regist event listener
         getLogger().info(Language.translate("plugin.setup.event"));
-        this.getServer().getPluginManager().registerEvents(new PlayerLister(), this);
+        this.getServer().getPluginManager().registerEvents(new PlayerLister(this), this);
 
         // regist discord api
         if (!RegistDiscord()) {
