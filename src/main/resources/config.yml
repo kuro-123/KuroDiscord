@@ -17,3 +17,5 @@ Discord:
   MessageMaxLength: 48
   # game title
   GameName: "GAME"
+
+chatevent: true

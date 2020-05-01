@@ -22,6 +22,9 @@ public class PlayerLister implements Listener {
 
 	@EventHandler(priority = EventPriority.LOWEST)
 	public void onChat(final AsyncPlayerChatEvent e) {
+		boolean chatevent = plugin.getConfig().getBoolean("chatevent", true);
+		if (!chatevent) return;
+
 		Player player = e.getPlayer();
 		String message = e.getMessage();
 		if(e.isAsynchronous()) {
